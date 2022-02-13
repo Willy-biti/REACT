@@ -14,7 +14,7 @@ const App = () =>{
     let newList = [...list];
     newList.push({
       id:list.length + 1,
-      name: '',
+      name: taskName,
       done:false
     })
     setList(newList)
@@ -26,7 +26,7 @@ const App = () =>{
         <C.Header>Lista de Tarefas</C.Header>
 
         {/* {Adicionar novas tarefas} */}
-        <AddArea onEnter = {handleAddTask} />
+        <AddArea onEnter ={handleAddTask} />
 
         {list.map((item, index)=>(
             <ListItem key={index} item={item} />
